@@ -46,4 +46,4 @@ EXPOSE 8080
 
 
 #USER tomcat
-CMD ["starpup.sh"]
+CMD ["./starpup.sh"]
