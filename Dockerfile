@@ -1,5 +1,5 @@
 # Centos based container with Java and Tomcat
-FROM centos:centos7
+FROM centos:centos7.2.1511
 MAINTAINER Seaman
 
 # Install prepare infrastructure
