@@ -36,18 +36,11 @@ RUN wget -q https://archive.apache.org/dist/tomcat/tomcat-${TOMCAT_MAJOR_VERSION
 
 RUN chmod +x ${CATALINA_HOME}/bin/*sh
 
-# Create Tomcat admin user
-#RUN mkdir $CATALINA_HOME/scripts/
-#ADD create_admin_user.sh $CATALINA_HOME/scripts/create_admin_user.sh
-#ADD tomcat.sh $CATALINA_HOME/scripts/tomcat.sh
-#RUN chmod +x $CATALINA_HOME/scripts/*.sh
+# Add Setting file to tomcat/conf
+ADD tomcat-users.xml ${CATALINA_HOME}/conf
 
-# Create tomcat user
-#RUN groupadd -r tomcat && \
-#	useradd -g tomcat -d ${CATALINA_HOME} -s /sbin/nologin  -c "Tomcat user" tomcat && \
-#	chown -R tomcat:tomcat ${CATALINA_HOME}
 
-WORKDIR /opt/tomcat
+WORKDIR ${CATALINA_HOME}
 
 EXPOSE 8080
 
