@@ -50,4 +50,4 @@ EXPOSE 8080
 
 
 #USER tomcat
-CMD ["tomcat.sh"]
+CMD ["catalina.sh", "run"]
