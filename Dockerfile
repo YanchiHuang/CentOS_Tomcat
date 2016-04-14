@@ -8,7 +8,7 @@ RUN yum -y install wget
 RUN yum -y install tar 
 RUN yum -y install vim 
 # Clean up YUM when done.
-#RUN yum clean all
+RUN yum clean all
 
 # Prepare environment 
 ENV JAVA_HOME /opt/java
