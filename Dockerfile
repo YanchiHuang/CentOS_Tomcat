@@ -1,9 +1,9 @@
 # Centos based container with Java and Tomcat
-FROM centos:centos7.2.1511
+FROM centos:latest
 MAINTAINER Seaman
 
 # Install prepare infrastructure
-RUN yum -y update 
+RUN yum -y update
 RUN yum -y install wget 
 RUN yum -y install tar 
 RUN yum -y install vim 
