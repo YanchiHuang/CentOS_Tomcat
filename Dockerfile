@@ -3,11 +3,10 @@ FROM centos:centos7.2.1511
 MAINTAINER Seaman
 
 # Install prepare infrastructure
-RUN yum -y update && \
-	yum -y install wget && \
-	yum -y install tar && \
-	yum -y install vim 
-	
+RUN yum -y update 
+RUN yum -y install wget 
+RUN yum -y install tar 
+RUN yum -y install vim 
 # Clean up YUM when done.
 #RUN yum clean all
 
