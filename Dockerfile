@@ -5,8 +5,7 @@ MAINTAINER Seaman
 # Install prepare infrastructure
 RUN yum -y update && \
 	yum -y install wget && \
-	yum -y install tar && \
-	yum clean all
+	yum -y install tar 
 
 # Prepare environment 
 ENV JAVA_HOME /opt/java
