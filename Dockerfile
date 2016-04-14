@@ -29,15 +29,15 @@ RUN wget http://apache-mirror.rbc.ru/pub/apache/tomcat/tomcat-8/v8.0.33/bin/apac
 RUN chmod +x ${CATALINA_HOME}/bin/*sh
 
 # Create Tomcat admin user
-RUN mkdir $CATALINA_HOME/scripts/
-ADD create_admin_user.sh $CATALINA_HOME/scripts/create_admin_user.sh
-ADD tomcat.sh $CATALINA_HOME/scripts/tomcat.sh
-RUN chmod +x $CATALINA_HOME/scripts/*.sh
+#RUN mkdir $CATALINA_HOME/scripts/
+#ADD create_admin_user.sh $CATALINA_HOME/scripts/create_admin_user.sh
+#ADD tomcat.sh $CATALINA_HOME/scripts/tomcat.sh
+#RUN chmod +x $CATALINA_HOME/scripts/*.sh
 
 # Create tomcat user
-RUN groupadd -r tomcat && \
-	useradd -g tomcat -d ${CATALINA_HOME} -s /sbin/nologin  -c "Tomcat user" tomcat && \
-	chown -R tomcat:tomcat ${CATALINA_HOME}
+#RUN groupadd -r tomcat && \
+#	useradd -g tomcat -d ${CATALINA_HOME} -s /sbin/nologin  -c "Tomcat user" tomcat && \
+#	chown -R tomcat:tomcat ${CATALINA_HOME}
 
 WORKDIR /opt/tomcat
 
